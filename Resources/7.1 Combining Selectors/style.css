@@ -1,0 +1,27 @@
+/* Write your code here: */
+
+/* Grouping more than one selectors together */
+h1, h2{
+    color: blueviolet;
+}
+
+/* Selects the children element */
+/* .box is the parent class and .done is the first level descendant of that class */
+.box > .done{
+    color: firebrick;
+}
+
+/* Select descendants, it doesn't have to be first level relationship*/
+.box li{
+    color: blue;
+}
+
+/*  Chain selector to select with type, class and id. This can be used to be
+very specific */
+li.done{
+    color: seagreen;
+}
+
+ul p.done{
+    font-size: 0.5rem;
+}
