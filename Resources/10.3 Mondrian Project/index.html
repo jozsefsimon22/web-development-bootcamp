@@ -19,11 +19,85 @@
     HINT: Remember you can't change the properties of grid lines.
     But grid lines are transparent!
     */
+
+    .container{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-container{
+      background-color: black;
+      width: 748px;
+      height: 748px;
+      display: grid;
+      grid-template-columns: 320px auto auto auto;
+      grid-template-rows: 414px auto auto 20px;
+      gap: 9px;
+    }
+
+    .box{
+      background-color: beige;
+    }
+
+    .one{
+      background-color: red;
+    }
+
+    .two{
+      grid-column: span 3;
+    }
+
+    .three{
+      grid-row: span 2
+    }
+
+    .four{
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+
+    .five{
+      background-color: #004592;
+      height: 120px;
+      width: 50px;
+      border-bottom: 10px solid black;
+    }
+
+    .six{
+      grid-row: span 2;
+      height: 186px;
+    }
+
+    .eighth{
+      background-color: #F9D01E;
+      width: 198px;
+    }
+
+    .nine{
+      background-color: black;
+      width: 153px;
+    }
+
   </style>
 </head>
 
 <body>
   <!-- Write your HTML here -->
+  <div class="container">
+    <div class="grid-container">
+      <div class="box one"></div>
+      <div class="box two"></div>
+      <div class="box three"></div>
+      <div class="box four"></div>
+      <div class="box five"></div>
+      <div class="box six"></div>
+      <div class="box seven"></div>
+      <div class="box eighth"></div>
+      <div class="box nine"></div>
+    </div>
+  </div>
 </body>
 
 </html>
