@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1 class="abril-fatface-regular">Dice Game</h1>
+    <h2>Welcome to the Dice Game!</h2>
+    <p>To play simply refresh your screen.</p>
+    <div class="container">
+        <div class="grid-item player-name abril-fatface-regular">Player 1</div>
+        <div class="grid-item player-name abril-fatface-regular">Player 2</div>
+        <div class="grid-item dice"><img id="dice-1" src="./Assets/dice-six-faces-one.svg" alt="dice"></div>
+        <div class="grid-item dice"><img id="dice-2" src="./Assets/dice-six-faces-one.svg" alt="dice"></div>
+        <div class="grid-item winner abril-fatface-regular winner-1">Player 1 Wins!</div>
+        <div class="grid-item winner abril-fatface-regular winner-2">Player 2 Wins!</div>
+        <div class="grid-item winner-image" id="winner-image-1"><img src="./Assets/medallist.svg" alt="medalist-icon"></div>
+        <div class="grid-item winner-image" id="winner-image-2"><img src="./Assets/medallist.svg" alt="medalist-icon"></div>
+
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
