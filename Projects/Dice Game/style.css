@@ -1,0 +1,61 @@
+body{
+    background-color: #13563B;
+}
+
+h1{
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+p{
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+
+.abril-fatface-regular {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 200px auto 200px;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.player-name{
+    color: white;
+    font-size: 4rem;
+}
+
+.dice{
+    width: 150px;
+    background-color: BL;
+}
+
+.winner-image{
+    width: 150px;
+    visibility: hidden;
+}
+
+.winner{
+    color: #e4a700;
+    font-size: 2rem;
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
