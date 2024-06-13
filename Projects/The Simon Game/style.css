@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+    padding: 5rem;
+    font-size: 3rem;
+    color: white;
+}
+
+body {
+    background-color: darkblue;
+    text-align: center;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.box {
+    margin: 25px;
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 20%;
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pressed{
+    box-shadow: 10px 10px;
+}
