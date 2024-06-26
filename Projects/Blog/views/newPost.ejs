@@ -2,10 +2,17 @@
 
 <div class="container">
     <form action="/" method="POST" class="new-post">
-        <input type="text" name="pName" id="pname" placeholder="Post Name">
-        <input type="text" name="article" id="article">
+        <input type="text" name="pName" id="pname" placeholder="Post Name" required>
+        <textarea name="article" id="article" required>Enter you post here...</textarea>
         <button type="submit" value="OK">Create New Post</input>
     </form>
 </div>
 
 <%- include("partial/footer.ejs") %>
+
+<script>
+    document.getElementById("article").addEventListener("focus", function(){
+        document.getElementById("article").innerText  = "";
+    })
+
+</script>

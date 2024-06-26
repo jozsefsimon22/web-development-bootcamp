@@ -1,39 +1,50 @@
+body {
+    background-color: #EEEDEB;
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .header {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     height: 5rem;
-    background-color: red;
+    background-color: #2F3645;
+    opacity: 75%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 5px rgba(0, 0, 0, 0.026);
 }
 
 .menubar {
     display: flex;
     flex-direction: row;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     gap: 50px;
     list-style: none;
-    margin: 0; 
-    padding: 0; 
+    margin: 0;
+    padding: 0;
     flex-wrap: wrap;
 }
 
-.menubar-button{
+.menubar-button {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 30px;
+    background-color: #939185;
     border-radius: 5px;
-    border: 1px solid white;
     width: 200px;
 }
 
-.menubar-button:hover, .blog:hover{
-    background-color: aqua;
+.menubar-button:hover,
+.blog:hover {
+    background-color: rgba(255, 255, 255, 0.683);
     cursor: pointer;
 }
 
-.container{
+.container {
     margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
@@ -41,39 +52,48 @@
     flex-wrap: wrap;
 }
 
-.new-post{
+.new-post {
     gap: 20px;
     display: flex;
     flex-direction: column;
     width: 50%;
 }
 
-form > *{
+form>* {
     height: 30px;
 }
 
-#article{
+#article {
     height: 300px;
 }
 
+.post {
+    text-align: center;
+}
 
-.blog{
+
+.blog {
     display: flex;
     width: 300px;
     height: 100px;
-    background-color: green;
+    background-color: #E6B9A6;
+    border-radius: 5px;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.026);
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
 @media screen and (max-width: 400px) {
-    .menubar{
+    .menubar {
         gap: 10px
     }
-}
 
+    .new-post{
+        width: 100%;
+    }
+}

@@ -1,23 +1,15 @@
 <%- include("partial/header.ejs") %>
 
-<% if (locals.posts) {%>
-    <h1>Test</h1>
-<% } %>
+<div class="container">
+    <% if (locals.posts.length > 0) {%>
+        <% posts.forEach((element, index) => { %>
+            <a href="/post?id=<%= index %>" class="blog" ><%= element.pName %></a>
+        <% }); %>
+    <% } else { %>
+        <h1>There are no blog posts yet</h1>
+        <% } %>
+</div>
 
-    <div class="container">
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-        <a href="http://gamekapocs.hu" class="blog">An Article</a>
-    </div>
+<%- include("partial/footer.ejs") %>
 
-    <%- include("partial/footer.ejs") %>
+</script>
