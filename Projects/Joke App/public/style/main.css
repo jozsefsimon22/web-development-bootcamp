@@ -1,0 +1,78 @@
+body{
+    background-color: #faaa16;
+    color: white;
+    /* background-image: linear-gradient(to top right,#ef9d8e, #ede5df); */
+    /* color: rgb(119, 104, 104); */
+}
+
+.margarine-regular {
+    font-family: "Margarine", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  img{
+    width: 120px;
+  }
+  
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.joke{
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    /* font-size: 1.5rem; */
+    /* background-image: linear-gradient(to top right,#FCD5CE, #FEC89A); */
+    background-color: black;
+}
+
+button{
+    border: 0px;
+    border-radius: 10px;
+    width: 400px;
+    padding: 2rem;
+    transition: background-color 1s;
+    background-color: #faaa16;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #faaa16c9;
+}
+
+.categories{
+    border-radius: 10px;
+    width: 400px;
+    padding: 2rem;
+    transition: 0.5s;
+    background-color: #faaa16;
+    font-family: "Margarine", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width : 600px){
+    .container{
+        width: 100%;
+    }
+
+    .joke{
+        height: 100vh;
+        border-radius: 0px;
+    }
+
+    button{
+        margin-top: 10px;
+    }
+
+}
