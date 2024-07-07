@@ -1,8 +1,6 @@
 body{
     background-color: #faaa16;
     color: white;
-    /* background-image: linear-gradient(to top right,#ef9d8e, #ede5df); */
-    /* color: rgb(119, 104, 104); */
 }
 
 .margarine-regular {
@@ -29,8 +27,6 @@ body{
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
-    /* font-size: 1.5rem; */
-    /* background-image: linear-gradient(to top right,#FCD5CE, #FEC89A); */
     background-color: black;
 }
 
@@ -62,8 +58,9 @@ button:hover{
 }
 
 @media screen and (max-width : 600px){
-    .container{
-        width: 100%;
+
+    body{
+        background-color: black;
     }
 
     .joke{
@@ -73,6 +70,11 @@ button:hover{
 
     button{
         margin-top: 10px;
+        width: 100%;
+    }
+
+    .categories{
+        width: 100%;
     }
 
 }
