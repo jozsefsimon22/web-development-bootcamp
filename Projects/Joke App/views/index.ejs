@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container margarine-regular">
+        <div class="joke">
+            <img src="<%= image %>" alt="">
+            <h1 id="setup">
+                <%= setup %>
+            </h1>
+            <h2 id="delivery">
+                <%= delivery %>
+            </h2>
+            <form action="/" method="post">
+                <select name="category" class="categories">
+                    <% categoryData.forEach((element)=> { %>
+                        <option value="<%= element %>">
+                            <%= element %>
+                        </option>
+                        <% }) %>
+                </select>
+                <button class="margarine-regular" type="submit">Give me another one...</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
