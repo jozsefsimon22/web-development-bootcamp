@@ -81,8 +81,31 @@ app.patch("/jokes/:id", (req, res) => {
 })
 
 //7. DELETE Specific joke
+app.delete("/jokes/:id", (req, res) => {
+  const id = parseInt(req.params.id);
+  const index = jokes.findIndex((joke) => joke.id === id);
+
+  jokes.splice(index, 1)
+
+  res.send("Joke deleted")
+})
 
 //8. DELETE All jokes
+
+app.delete("/all", (req, res) => {
+  const keyInput = req.query.key;
+
+  if(keyInput === masterKey){
+    jokes = []
+    res.send("All jokes have been deleted")
+  }
+  else{
+    res
+      .status(404)
+      .send("Invalid API key. No jokes were deleted")
+  }
+
+})
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
