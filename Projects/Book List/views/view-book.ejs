@@ -1,0 +1,46 @@
+<%- include("partial/header.ejs") %>
+
+    <div class="center-container">
+        <form action="/new" method="post" class="container">
+                <div class="upper">
+                    <div class="input-details">
+                        <label for="name">Book Name</label>
+                        <input type="text" name="name" id="name" disabled>
+                        <label for="isbn">Book ISBN</label>
+                        <input type="text" name="isbn" id="isbn" disabled>
+                        <div class="rating">
+                            <label for="rating">Your Rating</label>
+                            <input type="range" name="rating" id="rating" min="0" max="5">
+                            <p>Score: <output id="score"></output></p>
+                        </div>
+                    </div>
+
+                    <div class="book">
+                        <img src="assets/book-cover.jpg" alt="">
+                        <div>Rich Dad Poor Dad</div>
+                        <div class="rating">
+                            <span>Rating</span>
+                            <span>3.4/5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment">
+                    <label for="comment">Your Comments</label>
+                    <textarea name="comment" id="comment" disabled></textarea>
+                </div>
+                <button type="submit" class="button">Add Book</button>
+        </form>
+    </div>
+
+    <!-- <script>
+        const score = document.querySelector("#score");
+        const input = document.querySelector("#rating")
+
+        score.textContent = input.value;
+        input.addEventListener("input", (event) => {
+            score.textContent = event.target.value;
+        })
+    </script> -->
+    </body>
+
+    </html>

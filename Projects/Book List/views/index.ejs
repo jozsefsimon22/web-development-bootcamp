@@ -1,0 +1,136 @@
+<%- include("partial/header.ejs") %>
+
+    <div class="hero">
+        <div class="image-container">
+            <img src="assets/landing.webp" alt="a book">
+        </div>
+        <div class="hero-text">
+            <span>Track your reading journey with us.</span>
+            <div class="right-aligned">
+                <span>Add, Rate and Review your favorite books</span>
+            </div>
+        </div>
+        <div class="search">
+            <input class="search-input" id="test" onfocus="scrolldiv()" type="text" placeholder="Find your book">
+        </div>
+    </div>
+
+
+    <div class="book-catalog">
+        <!-- <% console.log("Frontend: " + books[0].name); %> -->
+        <% for(let bookItem of books){ %>
+            <a href="/"></a><div class="book">
+                <% var source = `https://covers.openlibrary.org/b/isbn/${bookItem.isbn}-L.jpg` %>
+                <img src= <%= source %> alt="book cover">
+                <div><%= bookItem.name %></div>
+                <div class="rating">
+                    <span>Rating</span>
+                    <span><%= bookItem.score %>/5</span>
+                </div>
+            </div>
+        $<% } %>
+
+        <!-- <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+
+        <div class="book">
+            <img src="https://covers.openlibrary.org/b/isbn/978-0446677455-L.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+        <div class="book">
+            <img src="assets/book-cover.jpg" alt="">
+            <div>Rich Dad Poor Dad</div>
+            <div class="rating">
+                <span>Rating</span>
+                <span>3.4/5</span>
+            </div>
+        </div>
+    </div> -->
+
+    <script>
+        function scrolldiv() {
+            var element = document.getElementById("test");
+            element.scrollIntoView({
+                block: 'center',
+                behavior: 'smooth'
+            });
+        }
+
+    </script>
+    </body>
+
+    </html>
