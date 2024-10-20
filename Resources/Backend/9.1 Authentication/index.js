@@ -40,6 +40,12 @@ app.post("/register", async (req, res) => {
   }
   catch(err){
     console.error(err)
+    if(err.code === '23505'){
+      res.status(400).send("Email address already exists")
+    }
+    else{
+      res.status(500).send("An error occurred while registering user.")
+    }
   }
 });
 
@@ -48,9 +54,23 @@ app.post("/login", async (req, res) => {
   const password = req.body.password
 
   try{
-    await db.query(`SELECT password FROM users WHERE email = ${username}`)
+    const user = await db.query('SELECT * FROM users WHERE email = $1', [username]);
+
+    if(user.rows.length === 0){
+      return res.status(404).send("User not found");
+    }
+
+    const dbPassword = user.rows[0].password;
+
+    if(dbPassword === password){
+      res.render("secrets.ejs")
+    }
+    else{
+      return res.status(401).send("Incorrect password")
+    }
   }catch (err){
       console.log(err);
+      res.status(500).send("An error occurred while logging in.")
     }
 
 });
